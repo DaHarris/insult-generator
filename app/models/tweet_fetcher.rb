@@ -4,6 +4,7 @@ class TweetFetcher
 
   attr_reader :client
   attr_reader :insult
+  attr_reader :friends
 
 
   def initialize
@@ -14,10 +15,10 @@ class TweetFetcher
       config.access_token        = ENV["ACCESS_TOKEN"]
       config.access_token_secret = ENV["ACCESS_TOKEN_SECRET"]
     end
-    @friends = [@rey_deloge, @Jess_Koch, @ajamesDesign13, @hkblackstock, @demullane,
-      @JordanICollier, @alexandrahanley, @cws322, @ooesili, @KennethT, @caseyK819,
-      @ahumanmackenzie, @missylaneuz, @_calebatwood, @tiltedtower, @JakeMarwil, @melissakhat,
-      @kerryhouchin, @TyHyten, @fbhewitt]
+    @friends = ["@rey_deloge", "@Jess_Koch", "@ajamesDesign13", "@hkblackstock", "@demullane",
+      "@JordanICollier", "@alexandrahanley", "@cws322", "@ooesili", "@KennethT", "@caseyK819",
+      "@ahumanmackenzie", "@missylaneuz", "@_calebatwood", "@tiltedtower", "@JakeMarwil", "@melissakhat",
+      "@kerryhouchin", "@TyHyten", "@fbhewitt"]
     @file = open('http://corz.org/public/docs/miscy/insults.txt?raw=true')
     @contents = @file.read
     @insults = @contents.split("\r\n")
