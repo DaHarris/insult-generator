@@ -25,7 +25,7 @@ class TweetFetcher
   end
 
   def tweet
-    random = @friends[rand(@friends.length)]
-    @client.update("#{random} - #{insult}")
+    @random = @friends[rand(@friends.length)]
+    @client.update("#{@random} - #{@insult}")
   end
 end
