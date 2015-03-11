@@ -5,6 +5,7 @@ class TweetFetcher
   attr_reader :client
   attr_reader :insult
   attr_reader :friends
+  attr_reader :contents
 
 
   def initialize
@@ -27,6 +28,6 @@ class TweetFetcher
 
   def tweet
     @random = @friends[rand(@friends.length)]
-    @client.update("#{@random} - #{@insult}")
+    @client.update("#{@random} - #{@insult} - sincerely, insultbot")
   end
 end
